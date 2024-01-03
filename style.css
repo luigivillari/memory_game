@@ -1,0 +1,25 @@
+body {
+    background-image:url('img_card/board.jpeg') ;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+}
+
+.grid-card {
+    display: grid;
+    grid-template-columns: repeat(8, 110px);
+    
+}
+
+.card {
+    width: 200px;
+    height: 150px;
+    background-image: url('img_card/back_card.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+
+}
