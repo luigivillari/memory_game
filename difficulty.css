@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.home{
+    width: 900px;       
+    height: 700px;
+    background-image: url('img_home/background_table.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+}
+
+.button-easy {
+    width: 250px;
+    height: 50px;
+    position: absolute; /* Posizionamento assoluto rispetto al suo contenitore principale (body) */
+    top: 300px; /* Esempio: sposta il pulsante verso il basso di 20 pixel rispetto all'angolo superiore del body */
+    left: 580px; /* Esempio: sposta il pulsante verso destra di 20 pixel rispetto all'angolo sinistro del body */
+    background-color: #f71e1e;; /* Colore di sfondo per il pulsante */
+    border-radius: 10px; /* Bordo arrotondato */
+    z-index: 2; /* Posiziona il pulsante sopra la home */
+}
+.button-text-pag2{
+    display: block; /* Rendi il testo un blocco per poter applicare stili aggiuntivi */
+    text-align: center; /* Centra il testo all'interno del blocco */
+    margin-top: 10px; /* Esempio: sposta il testo verso il basso di 10 pixel rispetto al bordo superiore del pulsante */
+    color: white; /* Colore del testo */
+    font-size: 30px; /* Dimensione del testo */
+    font-family: Arial, sans-serif;
+}
+
+.button-normal{
+    width: 250px;
+    height: 50px;
+    position: absolute; /* Posizionamento assoluto rispetto al suo contenitore principale (body) */
+    top: 400px; /* Esempio: sposta il pulsante verso il basso di 20 pixel rispetto all'angolo superiore del body */
+    left: 580px; /* Esempio: sposta il pulsante verso destra di 20 pixel rispetto all'angolo sinistro del body */
+    background-color: #f71e1e;; /* Colore di sfondo per il pulsante */
+    border-radius: 10px; /* Bordo arrotondato */
+    z-index: 2; /* Posiziona il pulsante sopra la home */
+    
+}
+
+.button-hard{
+    width: 250px;
+    height: 50px;
+    position: absolute; /* Posizionamento assoluto rispetto al suo contenitore principale (body) */
+    top: 500px; /* Esempio: sposta il pulsante verso il basso di 20 pixel rispetto all'angolo superiore del body */
+    left: 580px; /* Esempio: sposta il pulsante verso destra di 20 pixel rispetto all'angolo sinistro del body */
+    background-color: #f71e1e; /* Colore di sfondo per il pulsante */
+    border-radius: 10px; /* Bordo arrotondato */
+    z-index: 2; /* Posiziona il pulsante sopra la home */
+}
+
+.title-difficult{
+    display: block; /* Rendi il testo un blocco per poter applicare stili aggiuntivi */
+    text-align: center; /* Centra il testo all'interno del blocco */
+    margin-top: 10px; /* Esempio: sposta il testo verso il basso di 10 pixel rispetto al bordo superiore del pulsante */
+    color: white; /* Colore del testo */
+    font-size: 60px; /* Dimensione del testo */
+    font-family: Arial, sans-serif;
+    position: absolute;
+    bottom: 500px;
+    right:650px;
+    z-index:2;
+}
+
+.back-button{
+width: 60px; /* Diametro del bottone circolare */
+height: 60px; /* Diametro del bottone circolare */
+position: absolute; /* Posizionamento assoluto rispetto al suo contenitore principale (body) */
+top: 40px; /* Esempio: sposta il bottone circolare verso il basso di 120 pixel rispetto all'angolo superiore del body */
+right: 1080px; /* Esempio: sposta il bottone circolare verso destra di 20 pixel rispetto all'angolo sinistro del body */
+background-color: #f71e1e; /* Colore di sfondo per il bottone circolare */
+border-radius: 50%; /* Bordo arrotondato per ottenere la forma circolare */
+z-index: 2; /* Posiziona il bottone circolare sopra la home */
+overflow: hidden; 
+}
+
+.image-backbutton{
+    width: 60px; /* Fai in modo che l'immagine riempia completamente il suo contenitore */
+    height: 60px; /* Imposta l'altezza in modo proporzionale alla larghezza */
+    display: block;
+    background-image: url('img_home/back-button.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute; /* Abilita il posizionamento relativo all'interno del suo contenitore */
+    /* Modifica le seguenti linee per spostare l'icona */
+    top: 50%; /* Sposta l'immagine verso il basso del 50% dell'altezza del suo contenitore */
+    left: 50%; /* Sposta l'immagine verso destra del 50% della larghezza del suo contenitore */
+    transform: translate(-50%, -50%); 
+    z-index:2;
+}
