@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../css/home.css">
     <title>Home Memory</title>
 </head>
 <body>
@@ -18,9 +18,13 @@
     <button class="buttondifficult" id="buttondifficult">
         <span class="button-text">DIFFICULTY</span>
     </button>
-    <button class="buttonuser">
-        <img src="img_home/user.png" alt="Icona" class="button-icon">
+    <button class="buttonuser" onclick="toggleDropdown()">
+        <img src="../img_home/user.png" alt="Icona" class="button-icon">
     </button>
-    <script src="home.js"></script>
+    <div id="userDropdown" class="dropdown-content">
+        <a href="file:///Users/luigivillari/htdocs/memory_game/html/create_user.html">CREATE USER</a>
+        
+    </div>
+    <script src="../js_script/home.js"></script>
 </body>
 </html>

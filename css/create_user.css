@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.home{
+    width: 900px;       
+    height: 700px;
+    background-image: url('../img_home/background_table.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.username-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    z-index: 2;
+}
+
+.save {
+    padding: 10px;
+    border: 1px solid #4285f4;
+    border-radius: 5px;
+    background-color: #4285f4;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Aggiungi stile al bottone al passaggio del mouse */
+.save:hover {
+    background-color: #357ae8;
+}

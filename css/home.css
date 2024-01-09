@@ -8,16 +8,17 @@ body {
 .home{
     width: 900px;       
     height: 700px;
-    background-image: url('img_home/background_table.jpeg');
+    background-image: url('../img_home/background_table.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 1;
+    border-radius: 10px;
 }
 .title{
     width: 600px;       
     height: 250px;
-    background-image: url('img_home/title.png');
+    background-image: url('../img_home/title_neon.png');
     background-size:100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -89,3 +90,35 @@ overflow: hidden;
     left: 50%; /* Sposta l'immagine verso destra del 50% della larghezza del suo contenitore */
     transform: translate(-50%, -50%); /* Rendi l'immagine un blocco per poter applicare stili aggiuntivi */
 }
+
+/* Stile di base per il menu a tendina */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top:120px;
+    left:1000px;
+    background-color: #218d33;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Stile degli elementi del menu a tendina */
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #333;
+}
+
+/* Cambia il colore al passaggio del mouse */
+.dropdown-content a:hover {
+    color: white;
+}
+
+/* Mostra il menu a tendina quando il bottone viene premuto */
+.show {
+    display: block;
+}
+

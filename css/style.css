@@ -15,7 +15,7 @@ body {
 .gameboard {
     width: 900px;
     height: 700px;
-    background-image: url('img_home/background_table.jpeg');
+    background-image: url('../img_home/background_table.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -34,7 +34,7 @@ body {
 .card {
     width: 100px;
     height: 150px;
-    background-image: url('img_card/back_card.png');
+    background-image: url('../img_card/back_card.png');
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
@@ -58,19 +58,33 @@ body {
    
 }
 
-.turn{
+/* Stile per il punteggio del giocatore 1 */
+#first {
+
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    left:5px; /* Allineato a sinistra */
+  }
+  
+  /* Stile per il punteggio del giocatore 2 */
+  #last {
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    position:absolute;
+    right: 5px; /* Allineato a destra */
+  }
+
+  
+  .turn{
     position: absolute;
     bottom: 20px;
     left:110px;
     font-size: 70px;
     color: aliceblue;
     font-family: Arial, sans-serif;
-  }
-
-.time{
-    color:black;
-    z-index: 2;
-    font-size: 50px;
-    position: absolute;
-    left: 70px;
   }

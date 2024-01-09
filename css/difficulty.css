@@ -9,7 +9,7 @@ body {
 .home{
     width: 900px;       
     height: 700px;
-    background-image: url('img_home/background_table.jpeg');
+    background-image: url('../img_home/background_table.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -87,7 +87,7 @@ overflow: hidden;
     width: 60px; /* Fai in modo che l'immagine riempia completamente il suo contenitore */
     height: 60px; /* Imposta l'altezza in modo proporzionale alla larghezza */
     display: block;
-    background-image: url('img_home/back-button.png');
+    background-image: url('../img_home/back-button.png');
     background-size: 100%;
     background-repeat: no-repeat;
     position: absolute; /* Abilita il posizionamento relativo all'interno del suo contenitore */
