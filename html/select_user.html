@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/select_user.css">
+    <title>Home Memory</title>
+</head>
+<body>
+    <div class="home">
+        <button class="back-button" id="back-button">
+            <img class="image-backbutton"></img>
+        </button>
+        <h1>Seleziona un utente:</h1>
+        <div class = "alert alert-warning" id = "alert" style="display:none">
+            Non puoi selezionare lo stesso Player
+        </div>
+        <p id="p1">PLAYER 1:</p>
+        <select id="userList" name="userList"></select>
+        <p id="p2">PLAYER 2:</p>
+        <select id="userList2" name="userList"></select>
+        <button id="select">
+            <span class="button-text">SELEZIONA</span>
+        </button>
+    </div>
+    <script src="../js_script/select_user.js"></script>
+</body>
+</html>

@@ -3,8 +3,12 @@ button.addEventListener('click',newPage);
 
 const single = document.getElementById('buttonsingle');
 single.addEventListener('click',single_player);
+
+const multi = document.getElementById('buttonmulti');
+multi.addEventListener('click',multi_player);
+
 function newPage(){
-    window.location.href='file:///Users/luigivillari/htdocs/memory_game/html/difficulty.html';
+    window.location.href='../html/difficulty.html';
 }
 
 function single_player(){
@@ -14,12 +18,24 @@ function single_player(){
     // Ottieni il valore associato alla chiave 'value'
     const value = params.get('value');
     if(value != null){
-    window.location.href='file:///Users/luigivillari/htdocs/memory_game/html/memory_game_single.html?value=' + value;
+    window.location.href='../html/memory_game_single.html?value=' + value;
     }
     else{
-        window.location.href = 'file:///Users/luigivillari/htdocs/memory_game/html/memory_game_single.html?value=normal';
+        window.location.href = '../html/memory_game_single.html?value=normal';
     }
 
+}
+
+function multi_player(){
+    const queryString = window.location.search;
+    const params = new URLSearchParams(queryString);
+    const value = params.get('value');
+    if(value != null){
+    window.location.href='../html/select_user.html?value=' + value;
+    }
+    else{
+        window.location.href='../html/select_user.html?value=normal';
+    }
 }
 
 function toggleDropdown() {

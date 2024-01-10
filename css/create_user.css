@@ -5,7 +5,7 @@ body {
     height: 100vh;
     margin: 0;
 }
-.home{
+.home {
     width: 900px;       
     height: 700px;
     background-image: url('../img_home/background_table.jpeg');
@@ -19,8 +19,11 @@ body {
 .username-input {
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
+    border-radius: 20px;
+    position:absolute;
+    top: 380px;
+    left:600px;
+    font-size: 100%;
     z-index: 2;
 }
 
@@ -29,6 +32,9 @@ body {
     border: 1px solid #4285f4;
     border-radius: 5px;
     background-color: #4285f4;
+    position:absolute;
+    top:430px;
+    left:680px;
     color: #fff;
     cursor: pointer;
     z-index: 2;
@@ -38,3 +44,49 @@ body {
 .save:hover {
     background-color: #357ae8;
 }
+h1{
+    position:absolute;
+    top:250px;
+    left:540px;
+    color: #fff;
+
+}
+.back-button{
+    width: 60px; /* Diametro del bottone circolare */
+    height: 60px; /* Diametro del bottone circolare */
+    position: absolute; /* Posizionamento assoluto rispetto al suo contenitore principale (body) */
+    top: 40px; /* Esempio: sposta il bottone circolare verso il basso di 120 pixel rispetto all'angolo superiore del body */
+    right: 1080px; /* Esempio: sposta il bottone circolare verso destra di 20 pixel rispetto all'angolo sinistro del body */
+    background-color: #f71e1e; /* Colore di sfondo per il bottone circolare */
+    border-radius: 50%; /* Bordo arrotondato per ottenere la forma circolare */
+    z-index: 2; /* Posiziona il bottone circolare sopra la home */
+    overflow: hidden;
+    }
+    
+    .image-backbutton{
+    width: 60px; /* Fai in modo che l'immagine riempia completamente il suo contenitore */
+    height: 60px; /* Imposta l'altezza in modo proporzionale alla larghezza */
+    display: block;
+    background-image: url('../img_home/back-button.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute; /* Abilita il posizionamento relativo all'interno del suo contenitore */
+    top: 50%; /* Sposta l'immagine verso il basso del 50% dell'altezza del suo contenitore */
+    left: 50%; /* Sposta l'immagine verso destra del 50% della larghezza del suo contenitore */
+    transform: translate(-50%, -50%); 
+    z-index:2;
+    }
+    .alert {
+        position: absolute;
+        top:320px;
+        left:610px;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 0.35rem;
+      }
+      .alert-warning {
+        color: #806520;
+        background-color: #fdf3d8;
+        border-color: #fceec9;
+      }

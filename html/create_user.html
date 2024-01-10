@@ -7,9 +7,20 @@
     <title>Create User</title>
 </head>
 <body>
-    <div class="home"></div>
-    <p>Inserisci uno UserName</p>
-    <input type="text" class="username-input" placeholder="Inserisci qui">
-    <button class="save">SAVE</button>
+    <div class="home">
+    <button class ="back-button" id="back-button">
+        <img class="image-backbutton"></img>
+    </button>
+
+    <h1>INSERT USERNAME</h1>
+    <div class = "alert alert-warning" id = "alert" style="display:none">
+        Caratteri non consentiti
+    </div>
+    <form>
+        <input type="text" class="username-input" placeholder="Inserisci qui" id="username">
+    </form>
+      <button class="save" id="save">SAVE</button>
+    </div>
+    <script src="../js_script/username.js"></script>
 </body>
 </html>
