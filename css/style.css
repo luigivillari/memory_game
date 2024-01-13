@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body {
     display: flex;
     justify-content: center;
@@ -28,7 +30,7 @@ body {
     grid-template-columns: repeat(8, 100px);
     gap: 10px;
     position: absolute;
-    z-index: 2; /* Posiziona la griglia sopra la game board */
+    z-index: 2; 
 }
 
 .card {
@@ -51,7 +53,7 @@ body {
     width: 230px;
     height:680px;
     display: flex;
-    background-color: #817d7d;
+    background-color: #ffffff;
     position: absolute;
     left: 20px;
     padding: 10px;
@@ -62,29 +64,150 @@ body {
 #first {
 
     margin: 0;
-    font-size: 18px;
+    font-size: 300%;
     font-weight: bold;
-    position: absolute;
-    left:5px; /* Allineato a sinistra */
+    position:absolute;
+    left:45%; /* Allineato a sinistra */
+    top:50%;
+    font-family: 'Press Start 2P', cursive;
+    z-index : 3;
   }
   
   /* Stile per il punteggio del giocatore 2 */
   #last {
-    width: 10px;
-    height: 10px;
     margin: 0;
-    font-size: 18px;
+    font-size: 300%;
     font-weight: bold;
     position:absolute;
-    right: 5px; /* Allineato a destra */
+    left:45%; /* Allineato a sinistra */
+    top:50%;
+    font-family: 'Press Start 2P', cursive;
+    z-index : 3;
   }
 
   
   .turn{
+    color:black;
+    z-index: 2;
+    font-size: 300%;
+    font-family:'Press Start 2P', cursive; ;
     position: absolute;
-    bottom: 20px;
-    left:110px;
-    font-size: 70px;
-    color: aliceblue;
-    font-family: Arial, sans-serif;
+    bottom:8%;
+    left:45%;
   }
+  .score_last{
+    width: 230px;
+    height:680px;
+    display: flex;
+    background-color: #ffffff;
+    position: absolute;
+    right: 20px;
+    padding: 10px;
+    z-index: 2;
+   
+}
+#player1{
+position:absolute;
+top:15%;
+left:25%;
+z-index: 2;
+font-family: 'Press Start 2P', cursive;
+
+}
+
+#player2{
+position:absolute;
+top:15%;
+right: 30%;
+z-index: 2;
+font-family: 'Press Start 2P', cursive;
+}
+
+#title_player{
+    position:absolute;
+    left:5%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#title_score{
+    position:absolute;
+    top:15%;
+    left:15%;
+    font-family:'Press Start 2P', cursive;
+}
+
+#title_turno{
+    position:absolute;
+    top:75%;
+    left:15%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.table_score{
+    width:105%;
+    height: 40%;
+    background-image: url('../img_home/table_score.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: absolute;
+    top:30%;
+    right:5%;
+}
+.table_score2{
+    width:102%;
+    height: 40%;
+    background-image: url('../img_home/table_score.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    position: absolute;
+    top:30%;
+    
+  
+}
+
+
+#timer{
+    color:black;
+    z-index: 2;
+    font-size: 300%;
+    font-family:'Press Start 2P', cursive; ;
+    position: absolute;
+    bottom:8%;
+    right:15%;
+  }
+  
+#title_time{
+    position:absolute;
+    top:75%;
+    left:15%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#play-again{
+    width:30%;
+    height: 45%;
+    display:none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    z-index: 3;
+    position: absolute;
+    left:35%;
+    top:27.5%;
+}
+
+#home-button{
+    position: absolute;
+    bottom: 5%;
+    right:35%;
+    z-index: 3;
+}
+
+#replay-button{
+    position:absolute;
+    bottom: 5%;
+    right:10%;
+    z-index: 3;
+}

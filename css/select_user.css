@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body {
     display: flex;
     justify-content: center;
@@ -21,25 +22,28 @@ h1{
     color: white;
     text-align: center;
     margin-top: 150px;
+    font-family: 'Press Start 2P', cursive;
 }
 #p1{
     color:white;
     text-align: center;
     position:absolute;
-    top:280px;
-    left:647px;
+    top: 38%;
+    left:42%;
     font-size: 30px;
     margin: 0px;
+    font-family: 'Press Start 2P', cursive;
 }
 
 #p2{
     color:white;
     text-align: center;
     position:absolute;
-    top:400px;
-    left:647px;
+    top:55%;
+    left:42%;
     font-size: 30px;
     margin: 0px;
+    font-family: 'Press Start 2P', cursive;
 
 }
 #userList{
@@ -64,17 +68,17 @@ h1{
     left:620px;
     width: 200px;
     height: 100px;
-    background-color: #ffda1f; /* Colore di sfondo per il pulsante */
-    border-radius: 10px; /* Bordo arrotondato */
+    background-color: #ffda1f; 
+    border-radius: 10px; 
     z-index: 2;
 }
 .button-text {
-    display: block; /* Rendi il testo un blocco per poter applicare stili aggiuntivi */
-    text-align: center; /* Centra il testo all'interno del blocco */
-    margin-top: 10px; /* Esempio: sposta il testo verso il basso di 10 pixel rispetto al bordo superiore del pulsante */
-    color: white; /* Colore del testo */
-    font-size: 30px; /* Dimensione del testo */
-    font-family: Arial, sans-serif; /* Famiglia di caratteri */
+    display: block; 
+    text-align: center; 
+    margin-top: 5%; 
+    color: white;
+    font-size: 150%; 
+    font-family: 'Press Start 2P', cursive; 
 }
 
 .alert {
@@ -92,28 +96,27 @@ h1{
     border-color: #fceec9;
   }
   .back-button{
-    width: 60px; /* Diametro del bottone circolare */
-    height: 60px; /* Diametro del bottone circolare */
-    position: absolute; /* Posizionamento assoluto rispetto al suo contenitore principale (body) */
-    top: 40px; /* Esempio: sposta il bottone circolare verso il basso di 120 pixel rispetto all'angolo superiore del body */
-    right: 1080px; /* Esempio: sposta il bottone circolare verso destra di 20 pixel rispetto all'angolo sinistro del body */
-    background-color: #ffda1f; /* Colore di sfondo per il bottone circolare */
-    border-radius: 50%; /* Bordo arrotondato per ottenere la forma circolare */
-    z-index: 2; /* Posiziona il bottone circolare sopra la home */
+    width: 60px; 
+    height: 60px;
+    position: absolute; 
+    top: 40px; 
+    right: 1080px; 
+    background-color: #ffda1f; 
+    border-radius: 50%; 
+    z-index: 2; 
     overflow: hidden; 
     }
     
     .image-backbutton{
-        width: 60px; /* Fai in modo che l'immagine riempia completamente il suo contenitore */
-        height: 60px; /* Imposta l'altezza in modo proporzionale alla larghezza */
+        width: 60px; 
+        height: 60px;
         display: block;
         background-image: url('../img_home/back-button.png');
         background-size: 100%;
         background-repeat: no-repeat;
-        position: absolute; /* Abilita il posizionamento relativo all'interno del suo contenitore */
-        /* Modifica le seguenti linee per spostare l'icona */
-        top: 50%; /* Sposta l'immagine verso il basso del 50% dell'altezza del suo contenitore */
-        left: 50%; /* Sposta l'immagine verso destra del 50% della larghezza del suo contenitore */
+        position: absolute; 
+        top: 50%;
+        left: 50%; 
         transform: translate(-50%, -50%); 
         z-index:2;
     }

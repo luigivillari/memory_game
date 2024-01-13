@@ -8,15 +8,62 @@
 </head>
 <body>
     <div class="gameinfo"></div>
+
     <div class="gameboard-container">
-        <div class="gameboard"></div>
+
+        <div class="gameboard">
+
+            <div id = "play-again">
+
+                <button id = "home-button">HOME</button>
+
+                <button id = "replay-button">PLAY AGAIN</button>
+                
+            </div>
+
+        </div>
     </div>
     <div class="gridcard" id="gridCard"></div>
     <div class="score" id="scores">
-        <p id="first"></p>
-        <p id="last"></p>
-        <div class="turn" id="turno"></div>
+
+        <h1 id="title_player">PLAYER1</h1> 
+
+        <div id="player1"></div>
+
+        <div class="table_score">
+
+            <h1 id="title_score">SCORE:</h1>
+
+            <p id="first"></p>
+        </div>
+
+        <h1 id="title_time">TIME:</h1>
+        <div id="timer"></div>
+        <!-- <div class="turn" id="turno"></div> -->
+
     </div>
+
+    <div class="score_last" id="scores">
+
+        <h1 id="title_player">PLAYER2</h1>
+
+        <div id = "player2"></div>
+
+        <div class="table_score2">
+
+            <h1 id="title_score">SCORE:</h1>
+
+            <p id="last"></p>
+
+        </div>
+
+        <h1 id="title_turno">TURNO:</h1>
+
+        <div class="turn" id="turno2"></div>
+
+    </div>
+
     <script src="../js_script/memory.js"></script>
+    
 </body>
 </html>

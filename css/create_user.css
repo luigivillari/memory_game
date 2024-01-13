@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body {
     display: flex;
     justify-content: center;
@@ -38,6 +39,7 @@ body {
     color: #fff;
     cursor: pointer;
     z-index: 2;
+    font-family: 'Press Start 2P', cursive;
 }
 
 /* Aggiungi stile al bottone al passaggio del mouse */
@@ -49,30 +51,31 @@ h1{
     top:250px;
     left:540px;
     color: #fff;
+    font-family: 'Press Start 2P', cursive;
 
 }
 .back-button{
-    width: 60px; /* Diametro del bottone circolare */
-    height: 60px; /* Diametro del bottone circolare */
-    position: absolute; /* Posizionamento assoluto rispetto al suo contenitore principale (body) */
-    top: 40px; /* Esempio: sposta il bottone circolare verso il basso di 120 pixel rispetto all'angolo superiore del body */
-    right: 1080px; /* Esempio: sposta il bottone circolare verso destra di 20 pixel rispetto all'angolo sinistro del body */
-    background-color: #f71e1e; /* Colore di sfondo per il bottone circolare */
-    border-radius: 50%; /* Bordo arrotondato per ottenere la forma circolare */
-    z-index: 2; /* Posiziona il bottone circolare sopra la home */
+    width: 60px;
+    height: 60px; 
+    position: absolute; 
+    top: 40px; 
+    right: 1080px; 
+    background-color: #f71e1e; 
+    border-radius: 50%; 
+    z-index: 2; 
     overflow: hidden;
     }
     
     .image-backbutton{
-    width: 60px; /* Fai in modo che l'immagine riempia completamente il suo contenitore */
-    height: 60px; /* Imposta l'altezza in modo proporzionale alla larghezza */
+    width: 60px; 
+    height: 60px; 
     display: block;
     background-image: url('../img_home/back-button.png');
     background-size: 100%;
     background-repeat: no-repeat;
-    position: absolute; /* Abilita il posizionamento relativo all'interno del suo contenitore */
-    top: 50%; /* Sposta l'immagine verso il basso del 50% dell'altezza del suo contenitore */
-    left: 50%; /* Sposta l'immagine verso destra del 50% della larghezza del suo contenitore */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
     transform: translate(-50%, -50%); 
     z-index:2;
     }

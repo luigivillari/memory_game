@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body {
     display: flex;
     justify-content: center;
@@ -41,6 +42,7 @@ body {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
     
+    
 }
 
 .card:hover {
@@ -51,7 +53,7 @@ body {
     width: 230px;
     height:680px;
     display: flex;
-    background-color: #817d7d;
+    background-color: #ffffff;
     position: absolute;
     left: 20px;
     padding: 10px;
@@ -60,17 +62,35 @@ body {
 
 .turn{
     position: absolute;
-    bottom: 20px;
-    left:110px;
-    font-size: 70px;
-    color: aliceblue;
-    font-family: Arial, sans-serif;
+    bottom: 30%;
+    left:42%;
+    font-size: 400%;
+    color: #000000;
+    font-family: 'Press Start 2P', cursive;
   }
 
 .time{
     color:black;
     z-index: 2;
-    font-size: 50px;
+    font-size: 200%;
     position: absolute;
-    left: 70px;
+    top:30%;
+    left:25%;
+    font-family: 'Press Start 2P', cursive;
   }
+
+#title_turno{
+    position:absolute;
+    top:45%;
+    left:15%;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 2;
+}
+
+#title_time{
+    position:absolute;
+    top:20%;
+    left:15%;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 2;
+}
