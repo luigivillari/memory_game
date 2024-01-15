@@ -7,15 +7,10 @@ body {
     margin: 0;
 
 }
-.gameinfo{
-    justify-content: left;
-    align-items: left;
-    height: 100vh;
-}
 
 .gameboard {
-    width: 900px;
-    height: 700px;
+    width: 62%;       
+    height: 95%;
     background-image: url('../img_home/background_table.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -26,17 +21,18 @@ body {
 
 .gridcard {
     display: grid;
-    grid-template-columns: repeat(8, 100px);
-    gap: 10px;
+    grid-template-columns: repeat(8, 13%);
     position: absolute;
-    z-index: 2; /* Posiziona la griglia sopra la game board */
+    top:10%;
+    margin-left:3%;
+    z-index: 1; /* Posiziona la griglia sopra la game board */
 }
 
 .card {
     width: 100px;
     height: 150px;
     background-image: url('../img_card/back_card.png');
-    background-size: 90%;
+    background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
     transition: transform 0.3s ease-in-out;
@@ -50,13 +46,13 @@ body {
 }
 
 .score{
-    width: 230px;
-    height:680px;
+    width: 16.3%;
+    height:92.5%;
     display: flex;
     background-color: #ffffff;
     position: absolute;
-    left: 20px;
-    padding: 10px;
+    left: 1.3%;
+    padding: 0.7%;
    
 }
 
@@ -93,4 +89,59 @@ body {
     left:15%;
     font-family: 'Press Start 2P', cursive;
     z-index: 2;
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .card{
+        width: 70px;
+        height: 105px;
+    }
+    #title_time{
+        font-size:120%;
+    }
+    #title_turno{
+        font-size:120%;
+    }
+    .time{
+        font-size:150%;
+        left:20%;
+    }
+    .turn{
+        font-size: 200%;
+        left:35%;
+        bottom: 45%;
+    }
+}
+
+@media screen and (min-width:310px) and (max-width:475px) {
+    .gameboard{
+        width:100%;
+        height:100%;
+    }
+    .gridcard{
+        grid-template-columns: repeat(4, 35%);
+        margin-left: 4%;
+    }
+    .card{
+        width: 70px;
+        height: 90px;
+    }
+    #title_time{
+        font-size:120%;
+    }
+    #title_turno{
+        font-size:120%;
+    }
+    .time{
+        font-size:150%;
+        left:20%;
+    }
+    .turn{
+        font-size: 200%;
+        left:35%;
+        bottom: 45%;
+    }
+    .score{
+        display: none;
+    }
 }
