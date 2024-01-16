@@ -21,6 +21,7 @@ body {
 }
 
 .gridcard {
+    
     display: grid;
     grid-template-columns: repeat(8, 13%);
     position: absolute;
@@ -28,7 +29,7 @@ body {
     z-index: 2; 
 }
 
-.card {
+.card_game {
     width: 100px;
     height: 150px;
     background-image: url('../img_card/back_card.png');
@@ -40,7 +41,7 @@ body {
     
 }
 
-.card:hover {
+.card_game:hover {
     transform: translateY(-10px);
 }
 
@@ -86,7 +87,7 @@ body {
     font-size: 300%;
     font-family:'Press Start 2P', cursive; ;
     position: absolute;
-    bottom:8%;
+    bottom:5%;
     left:45%;
   }
 .score_last{
@@ -176,7 +177,7 @@ body {
     font-size: 300%;
     font-family:'Press Start 2P', cursive; ;
     position: absolute;
-    bottom:8%;
+    bottom:5%;
     right:15%;
   }
   
@@ -202,7 +203,7 @@ body {
 #home-button{
     position: absolute;
     bottom: 5%;
-    right:35%;
+    left:10%;
     z-index: 3;
 }
 
@@ -213,7 +214,7 @@ body {
     z-index: 3;
 }
 @media screen and (min-width:769px) and (max-width:1024px){ 
-    .card{
+    .card_game{
         width: 70px;
         height: 105px;
     }
@@ -272,7 +273,7 @@ body {
         grid-template-columns: repeat(4, 35%);
         margin-left: 4%;
     }
-    .card{
+    .card_game{
         width: 70px;
         height: 90px;
     }
@@ -329,8 +330,11 @@ body {
         display : none;
 
     }
-
-
+    #play-again{
+        width:60%;
+        height: 30%;
+        left:17.5%;
+    }
     
 }
 
@@ -345,7 +349,7 @@ body {
         grid-template-columns: repeat(4, 27%);
         margin-left: 4%;
     }
-    .card{
+    .card_game{
         width: 70px;
         height: 90px;
     }
@@ -403,6 +407,18 @@ body {
 
     }
 
+    #play-again{
+        width:60%;
+        height: 30%;
+        left:17.5%;
+    }
+
+    #home-button{
+        font-size:50%;
+    }
+    #replay-button{
+        font-size:50%;
+    }
 
     
 }

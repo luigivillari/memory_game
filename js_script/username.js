@@ -21,7 +21,7 @@ function recupero_dati_form(){
       console.log(req.responseText);
       var res = req.responseText;
       if(res.trim()=="ok"){
-          alert("ciao");
+          alert("Utente inserito correttamente");
           window.location.href="../html/home.html";
         }
       else{

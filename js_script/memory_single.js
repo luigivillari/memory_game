@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     duplicateSymbols.forEach(symbol => {
         const card = document.createElement('div');
-        card.classList.add('card');
+        card.classList.add('card_game');
         card.dataset.symbol = symbol;
 
         card.addEventListener('click',flipCard);
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     startgame(modalita);
 });
 let delay=0;
+let point=0;
 
 function startgame(modalita) { 
     if(modalita === 'easy'){
@@ -44,7 +45,7 @@ function startgame(modalita) {
     else {
         delay = 2000;
     }
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.card_game');
     
     cards.forEach(card => {
         const symbol = card.dataset.symbol;
@@ -53,7 +54,7 @@ function startgame(modalita) {
     })
 
     setTimeout(function () {
-        const cards = document.querySelectorAll('.card');
+        const cards = document.querySelectorAll('.card_game');
         cards.forEach(card => {
             card.classList.remove('flipped');
             card.style.backgroundImage = "url('../img_card/back_card.png')";
@@ -115,6 +116,7 @@ function checkMatch() {
 
             turn+=1;
             updateTurn();
+            end_game();
 
         } else {
             // Carte diverse, girale di nuovo
@@ -131,7 +133,7 @@ function checkMatch() {
         }
     // Ripristina la possibilità di cliccare dopo la verifica
     setTimeout(() => {
-        document.querySelectorAll('.card').forEach(card => {
+        document.querySelectorAll('.card_game').forEach(card => {
             card.style.pointerEvents = 'auto';
         });
     }, 200);
@@ -160,4 +162,23 @@ function updateTime() {
     document.getElementById('timer').textContent = formattedTime;
 
     seconds++;
+}
+
+const Back=document.getElementById('Back');
+Back.addEventListener('click', homePage);
+
+function homePage() {
+    window.location.href = "../html/home.html";
+}
+
+
+function end_game(){
+    point+=1;
+
+    if (point == 16){
+        alert("Hai completato l'allenamento con successo!");
+        window.location.href = "../html/home.html";
+    }
+
+    
 }
