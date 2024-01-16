@@ -246,7 +246,7 @@ function check_win(pairA,pairB){
     else if (pairA<pairB){
         id_player(Player2,Player1);
         const messageElement = document.createElement('p');
-        messageElement.innerHTML = "PLAYER 1 WON the Game";
+        messageElement.innerHTML = "PLAYER 2 WON the Game";
         popup.appendChild(messageElement);
         popup.style.display = 'block';
         
