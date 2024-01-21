@@ -1,39 +1,40 @@
+// Aggiungi un listener per l'evento 'DOMContentLoaded' per eseguire il codice quando il documento è completamente caricato
 document.addEventListener('DOMContentLoaded', function () {
-    const gridCard = document.getElementById('gridCard');
+    const gridCard = document.getElementById('gridCard');   // Ottieni il riferimento all'elemento con ID 'gridCard'
 
-    const symbols_16 = [
+    const symbols_16 = [   // Array di simboli utilizzati nel gioco (duplicato per creare le coppie)
         'apple', 'banana', 'broccoli', 'donut',
         'grape', 'hamburger', 'kebab', 'kiwi',
         'lemon', 'pancakes', 'pineapple', 'pizza',
         'softdrink', 'strawberry', 'sushi', 'watermelon'
     ];
 
-    const duplicateSymbols = symbols_16.concat(symbols_16);
-    shuffleArray(duplicateSymbols);
+    const duplicateSymbols = symbols_16.concat(symbols_16);//duplica i simboli per creare le coppie
+    shuffleArray(duplicateSymbols); // Mette in posizioni casuali i simboli
   
 
-    duplicateSymbols.forEach(symbol => {
-        const card = document.createElement('div');
-        card.classList.add('card_game');
-        card.dataset.symbol = symbol;
+    duplicateSymbols.forEach(symbol => {    // Itera su ogni simbolo e crea una carta per ciascuno
+        const card = document.createElement('div');//crea un elemento div per ogni carta
+        card.classList.add('card_game');    //aggiunge la classe card_game per ogni carta
+        card.dataset.symbol = symbol;   //inserisce un simbolo
 
-        card.addEventListener('click',flipCard);
+        card.addEventListener('click',flipCard);    // Aggiungi un listener per l'evento 'click' a ciascuna carta
         
 
-        gridCard.appendChild(card);
+        gridCard.appendChild(card);  // Aggiungi la carta al contenitore 'gridCard'
     });
     const queryString = window.location.search;
     // Crea un oggetto URLSearchParams dalla stringa della query
     const params = new URLSearchParams(queryString);
     // Ottieni il valore associato alla chiave 'value'
-    const modalita = params.get('value');
-    startgame(modalita);
+    const modalita = params.get('value');   //estrae il valore associato alla chiave 'value' dall'url
+    startgame(modalita);     // Avvia il gioco con la modalità selezionata e visualizza i nomi dei giocatori
 });
-let delay=0;
-let point=0;
+let delay=0;//Variabile per gestire la difficoltà della partita
+let point=0; //Inizializzo i punti 
 
 function startgame(modalita) { 
-    if(modalita === 'easy'){
+    if(modalita === 'easy'){ //Gestione delle varie difficoltà
         delay = 4000;
     }
     else if (modalita === 'normal'){
@@ -46,13 +47,14 @@ function startgame(modalita) {
         delay = 2000;
     }
     const cards = document.querySelectorAll('.card_game');
-    
+    // Ottieni tutte le carte e impostane dinamicamente l'immagine
     cards.forEach(card => {
         const symbol = card.dataset.symbol;
-        card.classList.toggle('flipped');
+        card.classList.toggle('flipped'); //aggiunge dinamica
         card.style.backgroundImage = `url('../img_card/front_card_${symbol}.png')`;
     })
 
+    // Dopo il ritardo, resetta tutte le carte allo stato di copertura
     setTimeout(function () {
         const cards = document.querySelectorAll('.card_game');
         cards.forEach(card => {
@@ -60,17 +62,17 @@ function startgame(modalita) {
             card.style.backgroundImage = "url('../img_card/back_card.png')";
         });
     }, delay);
-    startTimer();
+    startTimer();    // Fa partire il timer della partita
 }
 
-let turn = 0;
+let turn = 0; //Inizializzazione della variabile turn
     
-function updateTurn(){
+function updateTurn(){ //Funzione per aggiornare i turni
     let nTurn = document.getElementById('turno');
     nTurn.innerHTML = turn ;
 }
 
-function shuffleArray(array) {
+function shuffleArray(array) { //Funzione per mischiare le carte
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
@@ -78,8 +80,8 @@ function shuffleArray(array) {
 }
 
 
-let flippedCards = [];
-function flipCard() {
+let flippedCards = []; //Creazione dell'array flippedCards
+function flipCard() { //Funzione che mi permette di girare graficamente le carte e di annetterle all'interno dell'array flippedCards
 
     const selectedCard = this;
     selectedCard.classList.toggle('flipped');
@@ -102,7 +104,7 @@ function flipCard() {
 }
 
 
-function checkMatch() {
+function checkMatch() {  //Funzione per controllare se il giocatore ha trovato o no una coppia
     const [card1, card2] = flippedCards;
 
 
@@ -153,10 +155,10 @@ function startTimer() {
     timerInterval = setInterval(updateTime, 1000);
 }
 
-function updateTime() {
+function updateTime() { //Funzione che gestisce il contatore del tempo durante la partita
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
-
+    //formatta il tempo
     const formattedTime = `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
 
     document.getElementById('timer').textContent = formattedTime;
@@ -168,16 +170,16 @@ const Back=document.getElementById('Back');
 Back.addEventListener('click', homePage);
 
 function homePage() {
-    window.location.href = "../html/home.html";
+    window.location.href = "../html/home.html"; //Reindirizzamento alla pagina specificata
 }
 
 
-function end_game(){
+function end_game(){ //Funzione riconoscere la fine della partita
     point+=1;
 
     if (point == 16){
         alert("Hai completato l'allenamento con successo!");
-        window.location.href = "../html/home.html";
+        window.location.href = "../html/home.html"; //Reindirizzamento alla pagina specificata
     }
 
     

@@ -4,10 +4,9 @@
  $password="root";
  $dbname="Memory";
 
- //create connection
+ //Creazione connessione
  $conn= mysqli_connect($servername,$username,$password,$dbname) or die ("Couldn't connect");
- //mysqli_select_db($conn,$dbname);
- //check connection
+ //Controllo connessione
  if($conn->connect_error){
      die("Connection error: " . $conn->connect_error);
  }
