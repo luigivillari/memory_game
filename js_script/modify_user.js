@@ -29,7 +29,7 @@ function modifyUser(){
         window.location.href="../html/home.html";
       }
     else{
-        alert("error");
+        alert("Username non valido o già esistente");
       }
     }
     req.open("PUT", "../php/modify_user.php/Username",true);

@@ -25,7 +25,7 @@ function recupero_dati_form(){
           window.location.href="../html/home.html";
         }
       else{
-          alert("error");
+          alert("Username non valido o già esistente");
         }
       }
       req.open("POST", "../php/add_user.php/Username",true);
