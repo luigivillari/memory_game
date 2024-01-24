@@ -46,15 +46,9 @@ if ($method == "DELETE" && $table == "Username") {
     mysqli_stmt_execute($stmt1);//Esegui la query
     mysqli_stmt_bind_result($stmt1, $id); // Associa il risultato della query preparata ($stmt1) alla variabile $id
 
-    
     mysqli_stmt_fetch($stmt1);// Recupera il risultato
-
-    
     mysqli_stmt_close($stmt1);// Chiudi la query
-
     $id = intval($id); // Converti $id in un intero, se necessario
-   
-
     // Query per eliminare le righe corrispondenti nella tabella 'Partite'
     $query2 = "DELETE FROM Partite WHERE username_id = ?";
     $stmt2 = mysqli_prepare($conn, $query2);//Prepara la query
